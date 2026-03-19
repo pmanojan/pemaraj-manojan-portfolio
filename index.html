@@ -1,0 +1,2223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pemaraj Manojan - Network Administrator & Cybersecurity Specialist based in Sri Lanka. CCNA Certified with expertise in penetration testing and system administration.">
+    <meta name="keywords" content="Network Administrator, Cybersecurity, CCNA, Penetration Testing, IT Professional, Sri Lanka">
+    <meta name="author" content="Pemaraj Manojan">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pmanojan.github.io/">
+    <meta property="og:title" content="Pemaraj Manojan | Network Administrator & Cybersecurity Specialist">
+    <meta property="og:description" content="IT professional based in Sri Lanka with expertise in network administration, cybersecurity, and IT education.">
+    <meta property="og:image" content="image.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pmanojan.github.io/">
+    <meta name="twitter:title" content="Pemaraj Manojan | Network Administrator & Cybersecurity Specialist">
+    <meta name="twitter:description" content="IT professional based in Sri Lanka with expertise in network administration, cybersecurity, and IT education.">
+    
+    <title>Pemaraj Manojan | Network Administrator & Cybersecurity Specialist</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="canonical" href="https://pmanojan.github.io/">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Inline CSS Fixes -->
+    <style>
+        /* ============================================
+           CSS VARIABLES
+           ============================================ */
+        :root {
+            --primary: #00d4ff;
+            --secondary: #7c3aed;
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.6);
+            --bg-dark: #0a0a0f;
+            --bg-card: rgba(255, 255, 255, 0.02);
+        }
+
+        /* ============================================
+           CRITICAL FIXES
+           ============================================ */
+        
+        /* Fix: Hire Me button on same line */
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+        
+        .nav-cta-btn {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Fix: Degree text on one line */
+        .about-detail-text.degree-text {
+            white-space: nowrap;
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 768px) {
+            .about-detail-text.degree-text {
+                white-space: normal;
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* Fix: Tech icons not overlapping */
+        .tech-stack {
+            margin-top: 60px;
+            text-align: center;
+            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .tech-stack-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+        }
+        
+        .tech-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .tech-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            font-size: 1.5rem;
+            color: var(--primary);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        .tech-icon:hover {
+            background: rgba(0, 212, 255, 0.1);
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+        }
+        
+        /* Custom text-based icons */
+        .tech-icon.ps-icon,
+        .tech-icon.cisco-icon {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        /* Cisco Icon Styles */
+        .tech-icon.cisco-icon {
+            position: relative;
+        }
+        
+        .tech-icon.cisco-icon .cisco-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+        }
+        
+        .tech-icon.cisco-icon .cisco-bars {
+            display: flex;
+            gap: 2px;
+            align-items: flex-end;
+        }
+        
+        .tech-icon.cisco-icon .cisco-bar {
+            width: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .tech-icon.cisco-icon .cisco-bar:nth-child(1) { height: 8px; }
+        .tech-icon.cisco-icon .cisco-bar:nth-child(2) { height: 14px; }
+        .tech-icon.cisco-icon .cisco-bar:nth-child(3) { height: 20px; }
+        .tech-icon.cisco-icon .cisco-bar:nth-child(4) { height: 14px; }
+        .tech-icon.cisco-icon .cisco-bar:nth-child(5) { height: 8px; }
+        
+        .tech-icon.cisco-icon .cisco-text {
+            font-size: 0.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+        
+        .tech-icon.cisco-icon:hover .cisco-bar {
+            background: #fff;
+        }
+        
+        .tech-icon.cisco-icon:hover .cisco-text {
+            color: #fff;
+        }
+        
+        /* Tooltip for tech icons */
+        .tech-icon::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 12px;
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border-radius: 6px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 100;
+        }
+        
+        .tech-icon::before {
+            content: '';
+            position: absolute;
+            bottom: calc(100% + 4px);
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: rgba(0, 0, 0, 0.9);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .tech-icon:hover::after,
+        .tech-icon:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* ============================================
+           ANIMATION FIXES
+           ============================================ */
+        
+        /* Reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Floating cards animation */
+        .floating-card {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-card.card-1 {
+            animation-delay: 0s;
+        }
+        
+        .floating-card.card-2 {
+            animation-delay: 2s;
+        }
+        
+        .floating-card.card-3 {
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        /* Hero badge pulse animation */
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+        }
+        
+        /* Typing cursor animation */
+        .typing-text::after {
+            content: '|';
+            animation: blink 1s infinite;
+            color: var(--primary);
+        }
+        
+        @keyframes blink {
+            0%, 50% {
+                opacity: 1;
+            }
+            51%, 100% {
+                opacity: 0;
+            }
+        }
+        
+        /* Gradient text animation */
+        .gradient-text {
+            background: linear-gradient(135deg, #00d4ff, #7c3aed, #00d4ff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 3s ease infinite;
+        }
+        
+        @keyframes gradient-shift {
+            0% {
+                background-position: 0% center;
+            }
+            50% {
+                background-position: 100% center;
+            }
+            100% {
+                background-position: 0% center;
+            }
+        }
+        
+        /* Scroll indicator animation */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            animation: bounce 2s infinite;
+        }
+        
+        .mouse {
+            width: 24px;
+            height: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            position: relative;
+        }
+        
+        .wheel {
+            width: 4px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 2px;
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scroll-wheel 2s infinite;
+        }
+        
+        @keyframes scroll-wheel {
+            0% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(15px);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+        
+        /* Skill bar animation */
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            width: 0;
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Timeline animation */
+        .timeline-item {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.6s ease;
+        }
+        
+        .timeline-item.active,
+        .timeline-item.reveal.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Card hover animations */
+        .project-card,
+        .cert-card,
+        .education-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .project-card:hover,
+        .cert-card:hover,
+        .education-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15);
+        }
+        
+        /* Button hover animation */
+        .btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+        
+        /* Project overlay animation */
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        
+        .project-overlay-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #0a0a0f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+        }
+        
+        .project-card:hover .project-overlay-btn {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .project-card:hover .project-overlay-btn:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+        
+        .project-card:hover .project-overlay-btn:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+        
+        .project-card:hover .project-overlay-btn:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+        
+        .project-overlay-btn:hover {
+            background: #fff;
+            transform: scale(1.1);
+        }
+        
+        /* Modal animation */
+        .project-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            padding: 20px;
+        }
+        
+        .project-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background: linear-gradient(180deg, #1a1a2e 0%, #0a0a0f 100%);
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: scale(0.8) translateY(50px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .project-modal.active .modal-content {
+            transform: scale(1) translateY(0);
+        }
+        
+        /* Navbar scroll animation */
+        .navbar {
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Scroll to top button animation */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            z-index: 1000;
+        }
+        
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+        }
+        
+        /* Social links animation */
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            color: #0a0a0f;
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+        
+        /* Experience badge animation */
+        .experience-badge {
+            animation: pulse-glow 2s infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
+            }
+        }
+        
+        /* Mobile menu animation */
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: var(--text-primary);
+            margin: 6px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+        
+        /* Stagger animation for grid items */
+        .skills-grid .skill-category:nth-child(1) { transition-delay: 0.1s; }
+        .skills-grid .skill-category:nth-child(2) { transition-delay: 0.2s; }
+        .skills-grid .skill-category:nth-child(3) { transition-delay: 0.3s; }
+        .skills-grid .skill-category:nth-child(4) { transition-delay: 0.4s; }
+        
+        .projects-grid .project-card:nth-child(1) { transition-delay: 0.1s; }
+        .projects-grid .project-card:nth-child(2) { transition-delay: 0.2s; }
+        .projects-grid .project-card:nth-child(3) { transition-delay: 0.3s; }
+        .projects-grid .project-card:nth-child(4) { transition-delay: 0.4s; }
+        .projects-grid .project-card:nth-child(5) { transition-delay: 0.5s; }
+        
+        .cert-grid .cert-card:nth-child(1) { transition-delay: 0.05s; }
+        .cert-grid .cert-card:nth-child(2) { transition-delay: 0.1s; }
+        .cert-grid .cert-card:nth-child(3) { transition-delay: 0.15s; }
+        .cert-grid .cert-card:nth-child(4) { transition-delay: 0.2s; }
+        .cert-grid .cert-card:nth-child(5) { transition-delay: 0.25s; }
+        .cert-grid .cert-card:nth-child(6) { transition-delay: 0.3s; }
+        .cert-grid .cert-card:nth-child(7) { transition-delay: 0.35s; }
+        .cert-grid .cert-card:nth-child(8) { transition-delay: 0.4s; }
+        .cert-grid .cert-card:nth-child(9) { transition-delay: 0.45s; }
+        .cert-grid .cert-card:nth-child(10) { transition-delay: 0.5s; }
+        .cert-grid .cert-card:nth-child(11) { transition-delay: 0.55s; }
+        .cert-grid .cert-card:nth-child(12) { transition-delay: 0.6s; }
+        
+        /* Tech icons stagger animation */
+        .tech-icons .tech-icon:nth-child(1) { transition-delay: 0.05s; }
+        .tech-icons .tech-icon:nth-child(2) { transition-delay: 0.1s; }
+        .tech-icons .tech-icon:nth-child(3) { transition-delay: 0.15s; }
+        .tech-icons .tech-icon:nth-child(4) { transition-delay: 0.2s; }
+        .tech-icons .tech-icon:nth-child(5) { transition-delay: 0.25s; }
+        .tech-icons .tech-icon:nth-child(6) { transition-delay: 0.3s; }
+        .tech-icons .tech-icon:nth-child(7) { transition-delay: 0.35s; }
+        .tech-icons .tech-icon:nth-child(8) { transition-delay: 0.4s; }
+        .tech-icons .tech-icon:nth-child(9) { transition-delay: 0.45s; }
+        .tech-icons .tech-icon:nth-child(10) { transition-delay: 0.5s; }
+        .tech-icons .tech-icon:nth-child(11) { transition-delay: 0.55s; }
+        
+        /* Form input focus animation */
+        .form-input,
+        .form-textarea {
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        /* Tab button animation */
+        .project-tab,
+        .cert-tab {
+            transition: all 0.3s ease;
+        }
+        
+        .project-tab:hover,
+        .cert-tab:hover {
+            transform: translateY(-2px);
+        }
+        
+        .project-tab.active,
+        .cert-tab.active {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+        }
+        
+        /* Hero visual glow effect */
+        .hero-image-bg {
+            animation: glow-rotate 10s linear infinite;
+        }
+        
+        @keyframes glow-rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        /* Loading animation */
+        body:not(.loaded) {
+            overflow: hidden;
+        }
+        
+        body.loaded .hero-content {
+            animation: fadeInUp 1s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Visually hidden class for screen readers */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Tech icon responsive fix */
+        @media (max-width: 576px) {
+            .tech-icons {
+                gap: 15px;
+            }
+            
+            .tech-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .tech-icon.cisco-icon .cisco-bar:nth-child(1) { height: 6px; }
+            .tech-icon.cisco-icon .cisco-bar:nth-child(2) { height: 10px; }
+            .tech-icon.cisco-icon .cisco-bar:nth-child(3) { height: 14px; }
+            .tech-icon.cisco-icon .cisco-bar:nth-child(4) { height: 10px; }
+            .tech-icon.cisco-icon .cisco-bar:nth-child(5) { height: 6px; }
+            
+            .tech-icon.cisco-icon .cisco-bar {
+                width: 3px;
+            }
+        }
+        
+        /* Mobile nav fix for Hire Me button */
+        @media (max-width: 992px) {
+            .nav-cta {
+                margin-top: 20px;
+                margin-left: 0;
+                width: 100%;
+            }
+            
+            .nav-cta-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Effects -->
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" aria-label="Pemaraj Manojan - Home">
+                <div class="logo-icon">PM</div>
+                <span>P.Manojan</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="#home" class="nav-link active" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#experience" class="nav-link" role="menuitem">Experience</a></li>
+                <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#education" class="nav-link" role="menuitem">Education</a></li>
+                <li role="none"><a href="#certifications" class="nav-link" role="menuitem">Certifications</a></li>
+                <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+                <li class="nav-cta" role="none">
+                    <a href="#contact" class="btn btn-primary nav-cta-btn" role="menuitem">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        <span>Hire Me</span>
+                    </a>
+                </li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+        <div class="hero-bg-glow primary" aria-hidden="true"></div>
+        <div class="hero-bg-glow secondary" aria-hidden="true"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="dot" aria-hidden="true"></span>
+                        Open to Work
+                    </div>
+                    <p class="hero-greeting">Hello, I'm <span aria-hidden="true">👋</span></p>
+                    <h1 class="hero-name">
+                        Pemaraj <span class="gradient-text">Manojan</span>
+                    </h1>
+                    <div class="hero-title">
+                        <span class="typing-text" id="typing-text" aria-live="polite">Network Administrator</span>
+                    </div>
+                    <p class="hero-description">
+                        IT professional based in Sri Lanka with a strong focus on network administration, 
+                        cybersecurity, and education. CCNA Certified with expertise in penetration testing 
+                        and system administration.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            Get in Touch
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <i class="fas fa-folder-open" aria-hidden="true"></i>
+                            View Projects
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="3">0+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="12">0+</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="5">0+</div>
+                            <div class="stat-label">Projects Done</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image-bg" aria-hidden="true"></div>
+                        <div class="hero-image">
+                            <i class="fas fa-ethernet" aria-hidden="true"></i>
+                        </div>
+                        <div class="floating-card card-1">
+                            <div class="floating-card-icon">
+                                <i class="fas fa-shield-halved" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="floating-card-text">Cybersecurity</div>
+                                <div class="floating-card-subtext">Practicing & Learning</div>
+                            </div>
+                        </div>
+                        <div class="floating-card card-2">
+                            <div class="floating-card-icon">
+                                <i class="fas fa-network-wired" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="floating-card-text">CCNA Certified</div>
+                                <div class="floating-card-subtext">Cisco Networks</div>
+                            </div>
+                        </div>
+                        <div class="floating-card card-3">
+                            <div class="floating-card-icon">
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="floating-card-text">Network Admin</div>
+                                <div class="floating-card-subtext">Networking & Security</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image reveal-left">
+                    <div class="about-image-main">
+                        <img src="image.jpg" alt="Pemaraj Manojan - Network Administrator and Cybersecurity Specialist" loading="lazy">
+                    </div>
+                    <div class="about-image-decoration" aria-hidden="true"></div>
+                    <div class="experience-badge">
+                        <div class="experience-badge-number">3+</div>
+                        <div class="experience-badge-text">Years of<br>Experience</div>
+                    </div>
+                </div>
+                <div class="about-text reveal-right">
+                    <div class="section-label">
+                        <i class="fas fa-user" aria-hidden="true"></i>
+                        About Me
+                    </div>
+                    <h2>A Passionate Network Administrator & Cybersecurity Enthusiast</h2>
+                    <p>
+                        I am Pemaraj Manojan, an IT professional based in Sri Lanka with expertise in 
+                        network administration, cybersecurity, and IT education. Currently serving as a 
+                        Network Administrator at BCAS Campus - Jaffna, I combine technical expertise with 
+                        a passion for teaching.
+                    </p>
+                    <p>
+                        With a strong foundation in networking protocols like OSPF, EIGRP, and IPv4, 
+                        coupled with hands-on experience in penetration testing and ethical hacking, 
+                        I strive to deliver secure and efficient network solutions.
+                    </p>
+                    <div class="about-details">
+                        <div class="about-detail-item">
+                            <div class="about-detail-icon">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="about-detail-label">Location</div>
+                                <div class="about-detail-text">Sri Lanka</div>
+                            </div>
+                        </div>
+                        <div class="about-detail-item">
+                            <div class="about-detail-icon">
+                                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="about-detail-label">Degree</div>
+                                <div class="about-detail-text degree-text">BSc (Hons) Network Technology & Cybersecurity</div>
+                            </div>
+                        </div>
+                        <div class="about-detail-item">
+                            <div class="about-detail-icon">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="about-detail-label">Email</div>
+                                <div class="about-detail-text">pemarajmanojan2000@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="about-detail-item">
+                            <div class="about-detail-icon">
+                                <i class="fas fa-briefcase" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="about-detail-label">Employment</div>
+                                <div class="about-detail-text">Open to Opportunities</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-cta">
+                        <a href="resume.pdf" class="btn btn-primary" download>
+                            <i class="fas fa-download" aria-hidden="true"></i>
+                            Download CV
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-message" aria-hidden="true"></i>
+                            Let's Talk
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <i class="fas fa-code" aria-hidden="true"></i>
+                    My Skills
+                </div>
+                <h2 class="section-title">Technical Expertise</h2>
+                <p class="section-subtitle">
+                    A comprehensive overview of my technical skills and proficiency levels across 
+                    various domains of IT and development.
+                </p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <i class="fas fa-network-wired" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="skill-category-title">Networking</div>
+                            <div class="skill-category-count">Core Expertise</div>
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">IPv4/IPv6 & Subnetting</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">OSPF & EIGRP</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">LAN/WAN Configuration</span>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="92" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Network Security</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <i class="fas fa-shield-halved" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="skill-category-title">Cybersecurity</div>
+                            <div class="skill-category-count">Security Specialist</div>
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Penetration Testing</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Ethical Hacking</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Network Defense</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">ISO 27001 Compliance</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="skill-category-title">Programming</div>
+                            <div class="skill-category-count">Development Skills</div>
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-percentage">78%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="78" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">C#</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">OOP Concepts</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <i class="fas fa-server" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="skill-category-title">System Admin</div>
+                            <div class="skill-category-count">Infrastructure</div>
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Windows Server</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">VMware vSphere</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Linux Administration</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">FortiGate Firewalls</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Section with Cisco Icon -->
+            <div class="tech-stack reveal">
+                <h3 class="tech-stack-title">Technologies & Tools I Work With</h3>
+                <div class="tech-icons">
+                    <!-- Cisco Icon - Custom CSS Design -->
+                    <div class="tech-icon cisco-icon" data-tooltip="Cisco">
+                        <div class="cisco-logo">
+                            <div class="cisco-bars">
+                                <div class="cisco-bar"></div>
+                                <div class="cisco-bar"></div>
+                                <div class="cisco-bar"></div>
+                                <div class="cisco-bar"></div>
+                                <div class="cisco-bar"></div>
+                            </div>
+                            <span class="cisco-text">CISCO</span>
+                        </div>
+                        <span class="visually-hidden">Cisco</span>
+                    </div>
+                    
+                    <div class="tech-icon" data-tooltip="Python">
+                        <i class="fab fa-python" aria-hidden="true"></i>
+                        <span class="visually-hidden">Python</span>
+                    </div>
+                    <div class="tech-icon" data-tooltip="Java">
+                        <i class="fab fa-java" aria-hidden="true"></i>
+                        <span class="visually-hidden">Java</span>
+                    </div>
+                    <div class="tech-icon" data-tooltip="Linux">
+                        <i class="fab fa-linux" aria-hidden="true"></i>
+                        <span class="visually-hidden">Linux</span>
+                    </div>
+                    <div class="tech-icon" data-tooltip="Windows">
+                        <i class="fab fa-windows" aria-hidden="true"></i>
+                        <span class="visually-hidden">Windows</span>
+                    </div>
+                    <div class="tech-icon" data-tooltip="Database">
+                        <i class="fas fa-database" aria-hidden="true"></i>
+                        <span class="visually-hidden">Database</span>
+                    </div>
+                    <div class="tech-icon" data-tooltip="Cloud">
+                        <i class="fas fa-cloud" aria-hidden="true"></i>
+                        <span class="visually-hidden">Cloud</span>
+                    </div>
+                    <div class="tech-icon" data-tooltip="Security">
+                        <i class="fas fa-lock" aria-hidden="true"></i>
+                        <span class="visually-hidden">Security</span>
+                    </div>
+                    <div class="tech-icon" data-tooltip="Git">
+                        <i class="fab fa-git-alt" aria-hidden="true"></i>
+                        <span class="visually-hidden">Git</span>
+                    </div>
+                    <div class="tech-icon" data-tooltip="Networking">
+                        <i class="fas fa-network-wired" aria-hidden="true"></i>
+                        <span class="visually-hidden">Networking</span>
+                    </div>
+                    <div class="tech-icon ps-icon" data-tooltip="Photoshop">
+                        <span aria-hidden="true">Ps</span>
+                        <span class="visually-hidden">Photoshop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience section" id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <i class="fas fa-briefcase" aria-hidden="true"></i>
+                    Work Experience
+                </div>
+                <h2 class="section-title">Professional Journey</h2>
+                <p class="section-subtitle">
+                    A timeline of my professional growth and the valuable experiences 
+                    I've gained throughout my career in IT.
+                </p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar" aria-hidden="true"></i>
+                            Mar 2025 – Present
+                        </div>
+                        <h3 class="timeline-title">Network Administrator</h3>
+                        <p class="timeline-company">BCAS Campus - Jaffna</p>
+                        <p class="timeline-description">
+                            Managing and maintaining the campus network infrastructure. Implementing 
+                            security protocols, monitoring network performance, and ensuring seamless 
+                            connectivity for students and staff.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Network Management</span>
+                            <span class="timeline-tag">Security</span>
+                            <span class="timeline-tag">Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar" aria-hidden="true"></i>
+                            Jan 2025 – Mar 2025
+                        </div>
+                        <h3 class="timeline-title">Assistant Lecturer - IT</h3>
+                        <p class="timeline-company">BCAS Campus - Jaffna</p>
+                        <p class="timeline-description">
+                            Delivered lectures and practical sessions on networking, cybersecurity, 
+                            and programming fundamentals. Mentored students in their academic and 
+                            professional development.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Teaching</span>
+                            <span class="timeline-tag">Mentoring</span>
+                            <span class="timeline-tag">Curriculum</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar" aria-hidden="true"></i>
+                            Aug 2024 – Oct 2024
+                        </div>
+                        <h3 class="timeline-title">IT & Core Networks Assistant</h3>
+                        <p class="timeline-company">Hutch Sri Lanka (Internship)</p>
+                        <p class="timeline-description">
+                            Gained hands-on experience in telecommunications infrastructure. 
+                            Assisted in network operations, troubleshooting, and core network 
+                            maintenance activities.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Telecom</span>
+                            <span class="timeline-tag">Core Networks</span>
+                            <span class="timeline-tag">Operations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar" aria-hidden="true"></i>
+                            Feb 2022 – Jan 2025
+                        </div>
+                        <h3 class="timeline-title">Junior Network Engineer</h3>
+                        <p class="timeline-company">Freelance</p>
+                        <p class="timeline-description">
+                            Provided network setup, configuration, and troubleshooting services 
+                            for small to medium businesses. Implemented secure network solutions 
+                            and offered technical consultancy.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Freelance</span>
+                            <span class="timeline-tag">Consulting</span>
+                            <span class="timeline-tag">Network Setup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <i class="fas fa-folder-open" aria-hidden="true"></i>
+                    My Projects
+                </div>
+                <h2 class="section-title">Featured Works</h2>
+                <p class="section-subtitle">
+                    A showcase of my technical projects demonstrating expertise in networking, 
+                    cybersecurity, and software development.
+                </p>
+            </div>
+            
+            <div class="project-tabs reveal" role="tablist" aria-label="Project categories">
+                <button class="project-tab active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
+                <button class="project-tab" data-filter="networking" role="tab" aria-selected="false">Networking</button>
+                <button class="project-tab" data-filter="security" role="tab" aria-selected="false">Security</button>
+                <button class="project-tab" data-filter="development" role="tab" aria-selected="false">Development</button>
+            </div>
+
+            <div class="projects-grid" role="tabpanel">
+                <!-- Featured Project - Campus Network -->
+                <article class="project-card featured-project reveal" data-category="networking">
+                    <div class="project-image">
+                        <i class="fas fa-network-wired" aria-hidden="true"></i>
+                        <div class="project-overlay">
+                            <button class="project-overlay-btn" onclick="openProjectModal('campus-network')" aria-label="View project details">
+                                <i class="fas fa-eye" aria-hidden="true"></i>
+                            </button>
+                            <a href="#" class="project-overlay-btn" aria-label="View demo">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/pmanojan/BCAS-Campus-Network-Simulation-using-Packet-Tracer-BCAS-Assignment-" class="project-overlay-btn" target="_blank" rel="noopener" aria-label="View on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="featured-badge">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            Featured Project
+                        </span>
+                        <h3 class="project-title">Campus Network Infrastructure Design</h3>
+                        <p class="project-description">
+                            Designed and implemented a comprehensive network infrastructure for BCAS Campus 
+                            including VLAN segmentation, OSPF routing, firewall configuration, and WiFi 
+                            deployment serving 500+ users with high availability and security.
+                        </p>
+                        <div class="project-tech">
+                            <span class="project-tech-tag">Cisco</span>
+                            <span class="project-tech-tag">OSPF</span>
+                            <span class="project-tech-tag">VLAN</span>
+                            <span class="project-tech-tag">FortiGate</span>
+                            <span class="project-tech-tag">WiFi 6</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status completed">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                Completed
+                            </span>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View documentation">
+                                    <i class="fas fa-file-alt" aria-hidden="true"></i>
+                                </a>
+                                <button class="project-link" onclick="openProjectModal('campus-network')" aria-label="View details">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card - Crawler -->
+                <article class="project-card reveal" data-category="development">
+                    <div class="project-image">
+                        <i class="fas fa-spider" aria-hidden="true"></i>
+                        <div class="project-overlay">
+                            <button class="project-overlay-btn" onclick="openProjectModal('pentest-tool')" aria-label="View project details">
+                                <i class="fas fa-eye" aria-hidden="true"></i>
+                            </button>
+                            <a href="https://github.com/pmanojan/crawler-email-phone-scraper" class="project-overlay-btn" target="_blank" rel="noopener" aria-label="View on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                            Development
+                        </span>
+                        <h3 class="project-title">Crawler – Email, Phone & Social Media Scraper</h3>
+                        <p class="project-description">
+                            An asynchronous Python 3 crawler that extracts emails, phone numbers, and social media links 
+                            from target websites. Built with aiohttp and BeautifulSoup with unlimited crawling support.
+                        </p>
+                        <div class="project-tech">
+                            <span class="project-tech-tag">Python 3</span>
+                            <span class="project-tech-tag">aiohttp</span>
+                            <span class="project-tech-tag">BeautifulSoup</span>
+                            <span class="project-tech-tag">lxml</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status completed">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                Completed
+                            </span>
+                            <div class="project-links">
+                                <a href="https://github.com/pmanojan/crawler-email-phone-scraper" class="project-link" target="_blank" rel="noopener" aria-label="View on GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                                <button class="project-link" onclick="openProjectModal('pentest-tool')" aria-label="View details">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card - POS System -->
+                <article class="project-card reveal" data-category="development">
+                    <div class="project-image">
+                        <i class="fas fa-cash-register" aria-hidden="true"></i>
+                        <div class="project-overlay">
+                            <button class="project-overlay-btn" onclick="openProjectModal('inventory')" aria-label="View project details">
+                                <i class="fas fa-eye" aria-hidden="true"></i>
+                            </button>
+                            <a href="https://github.com/pmanojan/Point-of-Sale-System-for-LankaPC-Sri-Lanka-BCAS-Assignment---Developed-in-Java-using-NetBeans-IDE" class="project-overlay-btn" target="_blank" rel="noopener" aria-label="View on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                            Development
+                        </span>
+                        <h3 class="project-title">Point of Sale System for LankaPC</h3>
+                        <p class="project-description">
+                            A comprehensive Point of Sale (POS) system developed for LankaPC Sri Lanka 
+                            featuring inventory management, sales tracking, billing, and reporting functionalities.
+                        </p>
+                        <div class="project-tech">
+                            <span class="project-tech-tag">Java</span>
+                            <span class="project-tech-tag">NetBeans IDE</span>
+                            <span class="project-tech-tag">MySQL</span>
+                            <span class="project-tech-tag">Swing</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status completed">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                Completed
+                            </span>
+                            <div class="project-links">
+                                <a href="https://github.com/pmanojan/Point-of-Sale-System-for-LankaPC-Sri-Lanka-BCAS-Assignment---Developed-in-Java-using-NetBeans-IDE" class="project-link" target="_blank" rel="noopener" aria-label="View on GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                                <button class="project-link" onclick="openProjectModal('inventory')" aria-label="View details">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card - CCNA Lab -->
+                <article class="project-card reveal" data-category="networking">
+                    <div class="project-image">
+                        <i class="fas fa-network-wired" aria-hidden="true"></i>
+                        <div class="project-overlay">
+                            <button class="project-overlay-btn" onclick="openProjectModal('wifi-analyzer')" aria-label="View project details">
+                                <i class="fas fa-eye" aria-hidden="true"></i>
+                            </button>
+                            <a href="https://github.com/pmanojan/CCNA-Exam-Preparation-Lab-in-Packet-Tracer" class="project-overlay-btn" target="_blank" rel="noopener" aria-label="View on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">
+                            <i class="fas fa-network-wired" aria-hidden="true"></i>
+                            Networking
+                        </span>
+                        <h3 class="project-title">CCNA Exam Preparation Lab in Packet Tracer</h3>
+                        <p class="project-description">
+                            Comprehensive CCNA lab designed in Cisco Packet Tracer with essential networking 
+                            protocols including OSPF, VLANs, ACLs, DHCP, DNS, and network security configurations.
+                        </p>
+                        <div class="project-tech">
+                            <span class="project-tech-tag">Packet Tracer</span>
+                            <span class="project-tech-tag">OSPF</span>
+                            <span class="project-tech-tag">VLAN</span>
+                            <span class="project-tech-tag">ACL</span>
+                            <span class="project-tech-tag">DHCP</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status completed">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                Completed
+                            </span>
+                            <div class="project-links">
+                                <a href="https://github.com/pmanojan/CCNA-Exam-Preparation-Lab-in-Packet-Tracer" class="project-link" target="_blank" rel="noopener" aria-label="View on GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                                <button class="project-link" onclick="openProjectModal('wifi-analyzer')" aria-label="View details">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card - Network Automation -->
+                <article class="project-card reveal" data-category="networking">
+                    <div class="project-image">
+                        <i class="fas fa-code" aria-hidden="true"></i>
+                        <div class="project-overlay">
+                            <button class="project-overlay-btn" onclick="openProjectModal('firewall')" aria-label="View project details">
+                                <i class="fas fa-eye" aria-hidden="true"></i>
+                            </button>
+                            <a href="https://github.com/pmanojan/Excited-to-share-my-latest-network-automation-project-using-GNS3-and-Netmiko-" class="project-overlay-btn" target="_blank" rel="noopener" aria-label="View on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">
+                            <i class="fas fa-network-wired" aria-hidden="true"></i>
+                            Networking
+                        </span>
+                        <h3 class="project-title">Network Automation using GNS3 & Netmiko</h3>
+                        <p class="project-description">
+                            Network automation project using GNS3, Python, and Netmiko for efficient device 
+                            configuration. Includes OSPF, VLANs, IPv4 addressing, and real WiFi integration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="project-tech-tag">GNS3</span>
+                            <span class="project-tech-tag">Python</span>
+                            <span class="project-tech-tag">Netmiko</span>
+                            <span class="project-tech-tag">OSPF</span>
+                            <span class="project-tech-tag">VLAN</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status in-progress">
+                                <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                                In Progress
+                            </span>
+                            <div class="project-links">
+                                <a href="https://github.com/pmanojan/Excited-to-share-my-latest-network-automation-project-using-GNS3-and-Netmiko-" class="project-link" target="_blank" rel="noopener" aria-label="View on GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                                <button class="project-link" onclick="openProjectModal('firewall')" aria-label="View details">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="projects-cta reveal">
+                <a href="https://github.com/pmanojan" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    View All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProjectModal()" aria-label="Close modal">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <div class="modal-image">
+                <i class="fas fa-network-wired" id="modal-icon" aria-hidden="true"></i>
+            </div>
+            <div class="modal-body">
+                <h2 class="modal-title" id="modal-title">Project Title</h2>
+                <p class="modal-description" id="modal-description">
+                    Project description goes here...
+                </p>
+                <div class="modal-tech-stack" id="modal-tech-stack">
+                    <!-- Tech tags will be populated by JavaScript -->
+                </div>
+                <div class="modal-details">
+                    <div class="modal-detail-item">
+                        <div class="modal-detail-label">Category</div>
+                        <div class="modal-detail-value" id="modal-category">Networking</div>
+                    </div>
+                    <div class="modal-detail-item">
+                        <div class="modal-detail-label">Duration</div>
+                        <div class="modal-detail-value" id="modal-duration">3 Months</div>
+                    </div>
+                    <div class="modal-detail-item">
+                        <div class="modal-detail-label">Status</div>
+                        <div class="modal-detail-value" id="modal-status">Completed</div>
+                    </div>
+                    <div class="modal-detail-item">
+                        <div class="modal-detail-label">Role</div>
+                        <div class="modal-detail-value" id="modal-role">Lead Developer</div>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <a href="#" class="btn btn-primary" id="modal-demo-btn" target="_blank" rel="noopener">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        Live Demo
+                    </a>
+                    <a href="#" class="btn btn-secondary" id="modal-github-btn" target="_blank" rel="noopener">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <section class="education section" id="education">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                    Education
+                </div>
+                <h2 class="section-title">Academic Background</h2>
+                <p class="section-subtitle">
+                    My educational journey that has shaped my technical knowledge 
+                    and professional expertise.
+                </p>
+            </div>
+            <div class="education-grid">
+                <article class="education-card reveal">
+                    <span class="education-badge ongoing">Ongoing</span>
+                    <div class="education-icon">
+                        <i class="fas fa-university" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="education-degree">BSc (Hons) in Network Technology & Cyber Security</h3>
+                    <p class="education-school">Lincoln University College</p>
+                    <p class="education-date">
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                        May 2024 – May 2026 (Expected)
+                    </p>
+                    <p class="education-description">
+                        Specializing in Network and System Administration with focus on 
+                        cybersecurity frameworks, threat analysis, and secure network design.
+                    </p>
+                </article>
+
+                <article class="education-card reveal">
+                    <span class="education-badge distinction">Distinction</span>
+                    <div class="education-icon">
+                        <i class="fas fa-award" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="education-degree">Higher National Diploma in Networking</h3>
+                    <p class="education-school">BCAS Campus</p>
+                    <p class="education-date">
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                        Feb 2022 – Dec 2023
+                    </p>
+                    <p class="education-description">
+                        Graduated with Distinction. Comprehensive training in network 
+                        infrastructure, routing protocols, and system administration.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications section" id="certifications">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <i class="fas fa-certificate" aria-hidden="true"></i>
+                    Certifications
+                </div>
+                <h2 class="section-title">Professional Credentials</h2>
+                <p class="section-subtitle">
+                    Industry-recognized certifications demonstrating my commitment 
+                    to continuous learning and professional development.
+                </p>
+            </div>
+            <div class="cert-tabs reveal" role="tablist" aria-label="Certification categories">
+                <button class="cert-tab active" data-filter="all" role="tab" aria-selected="true">All Certifications</button>
+                <button class="cert-tab" data-filter="cisco" role="tab" aria-selected="false">Cisco</button>
+                <button class="cert-tab" data-filter="security" role="tab" aria-selected="false">Security</button>
+                <button class="cert-tab" data-filter="other" role="tab" aria-selected="false">Others</button>
+            </div>
+            <div class="cert-grid" role="tabpanel">
+                <article class="cert-card reveal" data-category="cisco">
+                    <div class="cert-provider">
+                        <div class="cert-provider-logo">
+                            <i class="fas fa-network-wired" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="cert-provider-name">Cisco</div>
+                            <div class="cert-provider-type">Networking</div>
+                        </div>
+                    </div>
+                    <h3 class="cert-name">CCNA - Cisco Certified Network Associate</h3>
+                    <div class="cert-meta">
+                        <span class="cert-status verified">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            Verified
+                        </span>
+                        <a href="#" class="cert-link" aria-label="View CCNA certificate">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="cert-card reveal" data-category="cisco">
+                    <div class="cert-provider">
+                        <div class="cert-provider-logo">
+                            <i class="fas fa-user-shield" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="cert-provider-name">Cisco</div>
+                            <div class="cert-provider-type">Security</div>
+                        </div>
+                    </div>
+                    <h3 class="cert-name">Ethical Hacker Certification</h3>
+                    <div class="cert-meta">
+                        <span class="cert-status verified">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            Verified
+                        </span>
+                        <a href="#" class="cert-link" aria-label="View Ethical Hacker certificate">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="cert-card reveal" data-category="cisco">
+                    <div class="cert-provider">
+                        <div class="cert-provider-logo">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="cert-provider-name">Cisco</div>
+                            <div class="cert-provider-type">Operations</div>
+                        </div>
+                    </div>
+                    <h3 class="cert-name">CyberOps Associate</h3>
+                    <div class="cert-meta">
+                        <span class="cert-status verified">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            Verified
+                        </span>
+                        <a href="#" class="cert-link" aria-label="View CyberOps certificate">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="cert-card reveal" data-category="cisco">
+                    <div class="cert-provider">
+                        <div class="cert-provider-logo">
+                            <i class="fas fa-lock" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="cert-provider-name">Cisco</div>
+                            <div class="cert-provider-type">Defense</div>
+                        </div>
+                    </div>
+                    <h3 class="cert-name">Network Defense Certification</h3>
+                    <div class="cert-meta">
+                        <span class="cert-status verified">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            Verified
+                        </span>
+                        <a href="#" class="cert-link" aria-label="View Network Defense certificate">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="cert-card reveal" data-category="cisco">
+                    <div class="cert-provider">
+                        <div class="cert-provider-logo">
+                            <i class="fab fa-python" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="cert-provider-name">Cisco</div>
+                            <div class="cert-provider-type">Programming</div>
+                        </div>
+                    </div>
+                    <h3 class="cert-name">Python Essentials 1</h3>
+                    <div class="cert-meta">
+                        <span class="cert-status verified">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            Verified
+                        </span>
+                        <a href="#" class="cert-link" aria-label="View Python Essentials certificate">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="cert-card reveal" data-category="security">
+                    <div class="cert-provider">
+                        <div class="cert-provider-logo">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="cert-provider-name">SkillFront</div>
+                            <div class="cert-provider-type">Compliance</div>
+                        </div>
+                    </div>
+                    <h3 class="cert-name">ISO/IEC 27001 Information Security Associate</h3>
+                    <div class="cert-meta">
+                        <span class="cert-status verified">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            Verified
+                        </span>
+                        <a href="#" class="cert-link" aria-label="View ISO 27001 certificate">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="cert-card reveal" data-category="security">
+                    <div class="cert-provider">
+                        <div class="cert-provider-logo">
+                            <i class="fas fa-fire" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="cert-provider-name">Fortinet</div>
+                            <div class="cert-provider-type">Firewall</div>
+                        </div>
+                    </div>
+                    <h3 class="cert-name">FortiGate 7.4 Operator</h3>
+                    <div class="cert-meta">
+                        <span class="cert-status verified">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            Verified
+                        </span>
+                        <a href="#" class="cert-link" aria-label="View FortiGate certificate">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="cert-card reveal" data-category="security">
+                    <div class="cert-provider">
+                        <div class="cert-provider-logo">
+                            <i class="fas fa-user-secret" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="cert-provider-name">Fortinet</div>
+                            <div class="cert-provider-type">Cybersecurity</div>
+                        </div>
+                    </div>
+                    <h3 class="cert-name">Fortinet Certified Associate Cybersecurity</h3>
+                    <div class="cert-meta">
+                        <span class="cert-status verified">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            Verified
+                        </span>
+                        <a href="#" class="cert-link" aria-label="View Fortinet Cybersecurity certificate">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="cert-card reveal" data-category="other">
+                    <div class="cert-provider">
+                        <div class="cert-provider-logo">
+                            <i class="fab fa-google" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="cert-provider-name">Google</div>
+                            <div class="cert-provider-type">Programming</div>
+                        </div>
+                    </div>
+                    <h3 class="cert-name">Crash Course on Python</h3>
+                    <div class="cert-meta">
+                        <span class="cert-status verified">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            Verified
+                        </span>
+                        <a href="#" class="cert-link" aria-label="View Google Python certificate">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="cert-card reveal" data-category="other">
+                    <div class="cert-provider">
+                        <div class="cert-provider-logo">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="cert-provider-name">Univ. of Maryland</div>
+                            <div class="cert-provider-type">Cybersecurity</div>
+                        </div>
+                    </div>
+                    <h3 class="cert-name">Cybersecurity for Everyone</h3>
+                    <div class="cert-meta">
+                        <span class="cert-status verified">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            Verified
+                        </span>
+                        <a href="#" class="cert-link" aria-label="View Maryland Cybersecurity certificate">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="cert-card reveal" data-category="other">
+                    <div class="cert-provider">
+                        <div class="cert-provider-logo">
+                            <i class="fas fa-server" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="cert-provider-name">Udemy</div>
+                            <div class="cert-provider-type">Administration</div>
+                        </div>
+                    </div>
+                    <h3 class="cert-name">Windows Server 2022 OS Administration</h3>
+                    <div class="cert-meta">
+                        <span class="cert-status verified">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            Verified
+                        </span>
+                        <a href="#" class="cert-link" aria-label="View Windows Server certificate">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="cert-card reveal" data-category="other">
+                    <div class="cert-provider">
+                        <div class="cert-provider-logo">
+                            <i class="fas fa-cloud" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="cert-provider-name">Udemy</div>
+                            <div class="cert-provider-type">Virtualization</div>
+                        </div>
+                    </div>
+                    <h3 class="cert-name">VMware vSphere Mastery</h3>
+                    <div class="cert-meta">
+                        <span class="cert-status verified">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            Verified
+                        </span>
+                        <a href="#" class="cert-link" aria-label="View VMware certificate">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    Contact Me
+                </div>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">
+                    Have a project in mind or want to discuss opportunities? 
+                    I'd love to hear from you!
+                </p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info reveal-left">
+                    <div>
+                        <h3>Get in Touch</h3>
+                        <p>
+                            Feel free to reach out for collaborations, job opportunities, 
+                            or just a friendly chat about technology and cybersecurity.
+                        </p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="contact-item-label">Email</div>
+                            <a href="mailto:pemarajmanojan2000@gmail.com" class="contact-item-value">pemarajmanojan2000@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="contact-item-label">Phone</div>
+                            <a href="tel:+94762882931" class="contact-item-value">+94 76 288 2931</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="contact-item-label">Location</div>
+                            <div class="contact-item-value">Jaffna, Sri Lanka</div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/pemarajmanojan/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/pmanojan" target="_blank" rel="noopener" class="social-link" aria-label="GitHub Profile">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100036599113712" target="_blank" rel="noopener" class="social-link" aria-label="Facebook Profile">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://instagram.com/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram Profile">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form reveal-right" id="contact-form" action="https://formsubmit.co/pemarajmanojan2000@gmail.com" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Your Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required autocomplete="email">
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label class="form-label" for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-input" placeholder="How can I help you?" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea id="message" name="message" class="form-textarea" placeholder="Your message here..." required rows="5"></textarea>
+                    </div>
+                    <!-- FormSubmit configuration -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="New Contact Form Message from Portfolio">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
+                    <button type="submit" class="btn btn-primary form-submit">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#home" class="footer-logo" aria-label="Back to home">
+                    <div class="logo-icon">PM</div>
+                    <span>Pemaraj Manojan</span>
+                </a>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © <span id="current-year">2026</span> Pemaraj Manojan. All rights reserved.
+                </p>
+                <p class="footer-made">
+                    Made with <i class="fas fa-heart" aria-hidden="true"></i><span class="visually-hidden">love</span> in Sri Lanka
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Dynamic Year Script -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
