@@ -2146,35 +2146,54 @@
                         </a>
                     </div>
                 </div>
-                <form class="contact-form reveal-right" id="contact-form" action="https://formsubmit.co/pemarajmanojan2000@gmail.com" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label" for="name">Your Name</label>
-                            <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required autocomplete="name">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="email">Your Email</label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required autocomplete="email">
-                        </div>
-                    </div>
-                    <div class="form-group full-width">
-                        <label class="form-label" for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" class="form-input" placeholder="How can I help you?" required>
-                    </div>
-                    <div class="form-group full-width">
-                        <label class="form-label" for="message">Message</label>
-                        <textarea id="message" name="message" class="form-textarea" placeholder="Your message here..." required rows="5"></textarea>
-                    </div>
-                    <!-- FormSubmit configuration -->
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="New Contact Form Message from Portfolio">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="text" name="_honey" style="display:none">
-                    <button type="submit" class="btn btn-primary form-submit">
-                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                        Send Message
-                    </button>
-                </form>
+                <form class="contact-form reveal-right" id="contact-form"
+      action="https://formsubmit.co/pemarajmanojan2000@gmail.com"
+      method="POST">
+
+    <div class="form-row">
+        <div class="form-group">
+            <label class="form-label" for="name">Your Name</label>
+            <input type="text" id="name" name="name" class="form-input"
+                   placeholder="John Doe" required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="email">Your Email</label>
+            <input type="email" id="email" name="email" class="form-input"
+                   placeholder="john@example.com" required autocomplete="email">
+        </div>
+    </div>
+
+    <div class="form-group full-width">
+        <label class="form-label" for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" class="form-input"
+               placeholder="How can I help you?" required>
+    </div>
+
+    <div class="form-group full-width">
+        <label class="form-label" for="message">Message</label>
+        <textarea id="message" name="message" class="form-textarea"
+                  placeholder="Your message here..." required rows="5"></textarea>
+    </div>
+
+    <!-- FormSubmit configuration -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Contact Form Message from Portfolio">
+    <input type="hidden" name="_template" value="table">
+
+    <!-- ✅ Redirect to Thank You Page -->
+    <input type="hidden" name="_next"
+           value="https://pmanojan.github.io/pemaraj-manojan-portfolio/thankyou.html">
+
+    <!-- Honeypot (anti-spam) -->
+    <input type="text" name="_honey" style="display:none">
+
+    <button type="submit" class="btn btn-primary form-submit">
+        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+        Send Message
+    </button>
+
+</form>
             </div>
         </div>
     </section>
