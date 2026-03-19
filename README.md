@@ -16,15 +16,12 @@
 <p align="center">
   <a href="#-features">Features</a> •
   <a href="#-tech-stack">Tech Stack</a> •
-  <a href="#-screenshots">Screenshots</a> •
   <a href="#-getting-started">Getting Started</a> •
   <a href="#-project-structure">Structure</a> •
   <a href="#-contact">Contact</a>
 </p>
 
 ---
-
-![Portfolio Preview](https://img.shields.io/badge/Preview-Dark%20Theme%20Portfolio-1a1a2e?style=flat-square)
 
 </div>
 
@@ -62,7 +59,6 @@
 - **Lazy Loading** — Deferred image loading for faster page loads
 - **SEO Optimized** — Meta tags, Open Graph, and semantic HTML
 - **Accessibility** — ARIA labels, keyboard navigation, and screen reader support
-- **Throttle & Debounce** — Optimized scroll and resize event handlers
 
 ## 🛠️ Tech Stack
 
@@ -80,8 +76,14 @@
 
 </div>
 
-## 📸 Screenshots
+## 🚀 Getting Started
 
-<div align="center">
+### Prerequisites
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- [Git](https://git-scm.com/) installed on your machine
 
-### 🖥️ Desktop View
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/pmanojan/pmanojan.github.io.git
