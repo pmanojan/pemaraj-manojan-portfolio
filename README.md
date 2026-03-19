@@ -205,7 +205,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ```
 MIT License
 
-Copyright (c) 2025 Pemaraj Manojan
+Copyright (c) 2026 Pemaraj Manojan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -258,10 +258,3 @@ Contributions are welcome! Feel free to:
 ![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square)
 
 </div>
-```
-
-**Instructions:**
-1. Create a new file named `README.md` in your repository root
-2. Copy and paste the entire content above
-3. Commit and push to GitHub
-4. GitHub will automatically render it with all badges, tables, and formatting
