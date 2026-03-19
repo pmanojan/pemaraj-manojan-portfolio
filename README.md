@@ -124,12 +124,10 @@ git push origin main
 pmanojan.github.io/
 │
 ├── 📄 index.html          # Main portfolio page
-├── 📄 thankyou.html       # Thank you page (after form submission)
 ├── 🎨 style.css           # Main stylesheet with all styles
 ├── ⚡ script.js            # JavaScript functionality
 ├── 🖼️ image.jpg            # Profile image
 ├── 🔖 favicon.ico         # Browser favicon
-├── 📄 resume.pdf          # Downloadable CV/Resume
 ├── 📄 README.md           # This file
 └── 📄 LICENSE             # MIT License
 ```
