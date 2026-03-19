@@ -1,6 +1,3 @@
-Here is the complete `README.md` file content ready to upload directly to GitHub:
-
-```markdown
 # 🌐 Pemaraj Manojan | Portfolio Website
 
 <div align="center">
